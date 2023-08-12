@@ -40,14 +40,41 @@ if(i==11){
 
 }
 */
-let i=5;
+/*let i=5;
 let z="";
 for(i=0; i<=10; i++){
     z+=i + "<br>"
 }
 document.getElementById("contain").innerHTML +=z;
+*/
 
+let a= parseFloat(prompt(" please Enter=a: "));
 
+let b= parseFloat(prompt(" please Enter=b: "));
 
+let c= parseFloat(prompt("please Enter=c: "));
+
+let delta=(b**2)+ (4*a*c);
+let msg="";
+if (delta < 0){
+    msg="no solution <br>";
+}
+else if(delta ==0){
+    let x=(-1*b)/ (2*a);
+    msg="this is one solution <br>";
+    msg +="x="+x+"<br>";
+
+}
+else{
+let x1=(-1*b - Math.sqrt(delta))/(2*a);
+let x2=(-1*b + Math.sqrt(delta))/(2*a);
+msg="x1 solution"+x1+"<br>";
+msg="x2 solution"+x2+"<br>";
+
+}
+
+document.getElementById("contain").innerHTML =x;
+document.getElementById("contain").innerHTML =x1;
+document.getElementById("contain").innerHTML =x2;
 
 
